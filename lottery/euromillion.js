@@ -16,7 +16,7 @@ for (var x = 0; x<51; x++){
 for (var x = 0; x < 13; x++){
   ball.push (0);
 }
-request('https://www.euro-millions.com/results-archive-2018', function (error, response, body) {
+request('https://www.euro-millions.com/results-archive-2019', function (error, response, body) {
   var $ = cheerio.load(body);
   var area = $(".ball");
   var aream = $(".lucky-star");
@@ -108,7 +108,7 @@ for (var x = 1; x < number2.length; x++){
   console.log(sorted2[3]);
   console.log(sorted2[4]);
  
-  for (var j = 0 ; j<10 ; j++){
+  for (var j = 0 ; j<20 ; j++){
     var sorted3 = [];
     
 
