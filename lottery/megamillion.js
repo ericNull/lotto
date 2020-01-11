@@ -15,7 +15,7 @@ for (var x = 0; x<71; x++){
 for (var x = 0; x<26; x++){
   ball.push (0);
 }
-request('https://www.national-lottery.com/megamillions/past-results', function (error, response, body) {
+request('https://www.national-lottery.com/megamillions/results-history-2019', function (error, response, body) {
   var $ = cheerio.load(body);
   var area = $(".megamillions-ball");
   var aream = $(".megamillions-mega-ball");
