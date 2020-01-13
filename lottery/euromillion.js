@@ -16,12 +16,15 @@ for (var x = 0; x<51; x++){
 for (var x = 0; x < 13; x++){
   ball.push (0);
 }
-request('https://www.euro-millions.com/results-archive-2019', function (error, response, body) {
+request('https://www.euro-millions.com/results', function (error, response, body) {
+>>>>>>> 43d60a29532e11b5680dad930d6562486f89217e
   var $ = cheerio.load(body);
   var area = $(".ball");
+  console.log(typeof(area));
   var aream = $(".lucky-star");
-    area.each((index,data) => {
-    //console.log($(data).text());
+   var sarea = area.slice(5);
+    sarea.each((index,data) => {
+    console.log($(data).text());
     var position = parseInt($(data).text());
     number[position] = number[position] + 1;
   })
@@ -108,7 +111,7 @@ for (var x = 1; x < number2.length; x++){
   console.log(sorted2[3]);
   console.log(sorted2[4]);
  
-  for (var j = 0 ; j<10 ; j++){
+  for (var j = 0 ; j<20 ; j++){
     var sorted3 = [];
     
 
