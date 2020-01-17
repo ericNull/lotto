@@ -17,14 +17,14 @@ for (var x = 0; x < 13; x++){
   ball.push (0);
 }
 request('https://www.euro-millions.com/results', function (error, response, body) {
->>>>>>> 43d60a29532e11b5680dad930d6562486f89217e
+
   var $ = cheerio.load(body);
   var area = $(".ball");
   console.log(typeof(area));
   var aream = $(".lucky-star");
    var sarea = area.slice(5);
     sarea.each((index,data) => {
-    console.log($(data).text());
+    //console.log($(data).text());
     var position = parseInt($(data).text());
     number[position] = number[position] + 1;
   })
